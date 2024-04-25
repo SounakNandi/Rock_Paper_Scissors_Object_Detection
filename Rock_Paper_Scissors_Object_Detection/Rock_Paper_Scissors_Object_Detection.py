@@ -30,7 +30,6 @@ one = cv2.imread('Pictures\\1.png')
 zero = cv2.imread('Pictures\\0.png')
 shoot = cv2.imread('Pictures\\shoot !!.png')
 
-
 def draw_screen():
     global img_scaled
 
@@ -49,11 +48,9 @@ def draw_screen():
     elif current_time == 0:
         bg_img[240:390, 425:575] = shoot
     
-    
     bg_img[155:545, 605:945] = img_scaled
 
     cv2.imshow('BG',bg_img)  
-
 
 def time_counter():
     global current_time,start_time,time_started,max_time,check_now
@@ -65,7 +62,6 @@ def time_counter():
         if current_time < 0:
             start_time = time.time()
             check_now = True
-
 
 def key_press_event():
         global game_started,run,time_started,start_time
@@ -101,9 +97,7 @@ def hand_detection():
                     player_choice = None
 
                 win_condition()
-                check_now = False
-
-                
+                check_now = False    
 
 def win_condition():
     global ai_choice,player_choice,player_score,ai_score,bg_img,check_now
@@ -137,7 +131,6 @@ def win_condition():
             elif ai_choice == 'rock':
                 ai_score += 1
         print(ai_score,player_score)
-
                 
 def score_counter():
     global zero_scaled
@@ -179,8 +172,6 @@ def end_screen():
             cv2.destroyAllWindows()
             run = False
         
-
-
 def main():
     while run:
         time_counter()
@@ -188,7 +179,6 @@ def main():
         score_counter()
         key_press_event()
         end_screen()
-
 
 if __name__ == '__main__':
     main()
