@@ -1,1 +1,1 @@
-# Rock_Paper__Scissors_Object_Detection
+# Rock_Paper_Scissors_Object_Detection
