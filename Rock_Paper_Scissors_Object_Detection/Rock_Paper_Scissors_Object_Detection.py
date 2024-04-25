@@ -1,4 +1,3 @@
-import tkinter.messagebox
 import cv2
 from cvzone.HandTrackingModule import HandDetector
 import time
